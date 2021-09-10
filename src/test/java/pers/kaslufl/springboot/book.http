@@ -1,0 +1,18 @@
+GET http://localhost:8080/book
+Accept: application/json
+
+###
+POST http://localhost:8080/book
+Content-Type: application/json
+
+{
+    "id": 4,
+    "title": "Hacking with Spring Boot 2.3: Reactive Edition",
+    "author": "Greg L. Turnquist",
+    "publisher": "Amazon.com Services LLC",
+    "releaseDate": "May 2020",
+    "isbn": "B086722L4L",
+    "topic": "Spring"
+ }
+
+###
