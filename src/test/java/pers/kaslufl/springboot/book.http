@@ -6,7 +6,7 @@ POST http://localhost:8080/book
 Content-Type: application/json
 
 {
-    "id": 4,
+    "id": 5,
     "title": "Hacking with Spring Boot 2.3: Reactive Edition",
     "author": "Greg L. Turnquist",
     "publisher": "Amazon.com Services LLC",
@@ -16,3 +16,23 @@ Content-Type: application/json
  }
 
 ###
+GET http://localhost:8080/book/5
+Accept: application/json
+
+###
+PUT http://localhost:8080/book/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Hacking with Spring Boot 2.3: Reactive Edition",
+  "author": "Alou",
+  "publisher": "Amazon.com Services LLC",
+  "releaseDate": "May 2020",
+  "isbn": "B086722L4L",
+  "topic": "Spring"
+}
+
+###
+DELETE http://localhost:8080/book/3
+Accept: application/json

@@ -22,9 +22,24 @@ public class BookController {
         return bookRepository.getAll();
     }
 
+    @GetMapping("/{id}")
+    public Book search(@PathVariable int id) {
+        return bookRepository.search(id);
+    }
+
     @PostMapping
     public Book create(@RequestBody Book book) throws Exception{
         return bookRepository.create(book);
     }
 
+    @PutMapping("/{id}")
+    public Book update(@RequestBody Book book, @PathVariable int id) {
+        book.setId(id);
+        return bookRepository.update(book);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id){
+        bookRepository.delete(id);
+    }
 }
